@@ -15,9 +15,6 @@
         <param name="ios-package" value="CDVGestureHandler" />
         <param name="onload" value="true" />
     </feature>
-    <feature name="Console">
-        <param name="ios-package" value="CDVLogger" />
-    </feature>
     <feature name="Device">
         <param name="ios-package" value="CDVDevice" />
     </feature>
@@ -35,15 +32,6 @@
     <feature name="Keyboard">
         <param name="ios-package" onload="true" value="IonicKeyboard" />
     </feature>
-    <name>Ionic Shop ++</name>
-    <description>
-        An Ionic Framework and Cordova project.
-    </description>
-    <author email="you@example.com" href="http://example.com.com/">
-      Your Name Here
-    </author>
-    <content src="index.html" />
-    <access origin="*" />
     <icon height="57" src="resources/ios/icon/icon.png" width="57" />
     <icon height="114" src="resources/ios/icon/icon@2x.png" width="114" />
     <icon height="40" src="resources/ios/icon/icon-40.png" width="40" />
@@ -74,6 +62,28 @@
     <splash height="1024" src="resources/ios/splash/Default-Portrait~ipad.png" width="768" />
     <splash height="960" src="resources/ios/splash/Default@2x~iphone.png" width="640" />
     <splash height="480" src="resources/ios/splash/Default~iphone.png" width="320" />
+    <feature name="Console">
+        <param name="ios-package" value="CDVLogger" />
+    </feature>
+    <name>E-Carwash</name>
+    <description>
+        An Ionic Framework and Cordova project.
+    </description>
+    <author email="you@example.com" href="http://example.com.com/">
+      Your Name Here
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <splash height="480" src="res/screen/ios/Default~iphone.png" width="320" />
+    <splash height="960" src="res/screen/ios/Default@2x~iphone.png" width="640" />
+    <splash height="1024" src="res/screen/ios/Default-Portrait~ipad.png" width="768" />
+    <splash height="2048" src="res/screen/ios/Default-Portrait@2x~ipad.png" width="1536" />
+    <splash height="768" src="res/screen/ios/Default-Landscape~ipad.png" width="1024" />
+    <splash height="1536" src="res/screen/ios/Default-Landscape@2x~ipad.png" width="2048" />
+    <splash height="1136" src="res/screen/ios/Default-568h@2x~iphone.png" width="640" />
+    <splash height="1334" src="res/screen/ios/Default-667h.png" width="750" />
+    <splash height="2208" src="res/screen/ios/Default-736h.png" width="1242" />
+    <splash height="1242" src="res/screen/ios/Default-Landscape-736h.png" width="2208" />
     <preference name="AllowInlineMediaPlayback" value="false" />
     <preference name="EnableViewportScale" value="false" />
     <preference name="KeyboardDisplayRequiresUserAction" value="true" />
@@ -93,5 +103,5 @@
     <preference name="android-minSdkVersion" value="16" />
     <preference name="BackupWebStorage" value="none" />
     <preference name="SplashScreen" value="screen" />
-    <preference name="SplashScreenDelay" value="3000" />
+    <preference name="SplashScreenDelay" value="10000" />
 </widget>

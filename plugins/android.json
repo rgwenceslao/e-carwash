@@ -7,9 +7,6 @@
         "files": {}
     },
     "installed_plugins": {
-        "cordova-plugin-console": {
-            "PACKAGE_NAME": "com.ionicframework.sidemenu405683"
-        },
         "cordova-plugin-device": {
             "PACKAGE_NAME": "com.ionicframework.sidemenu405683"
         },
@@ -26,6 +23,9 @@
             "PACKAGE_NAME": "com.ionicframework.sidemenu405683"
         },
         "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "com.ionicframework.sidemenu405683"
+        },
+        "cordova-plugin-console": {
             "PACKAGE_NAME": "com.ionicframework.sidemenu405683"
         }
     },

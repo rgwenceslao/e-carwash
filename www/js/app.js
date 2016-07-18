@@ -42,7 +42,7 @@ var NOODLIO_PAY_CHECKOUT_KEY    = {test: "pk_test_QGTo45DJY5kKmsX21RB3Lwvn", liv
 var STRIPE_ACCOUNT_ID           = "https://ecocarwash.firebaseio.com";
 
 // Set your Firebase url
-var FBURL                       = '<YOUR-FB-URL>';
+var FBURL                       = 'ecocarwash.firebaseio.com';
 
 // Define whether you are in development mode (TEST_MODE: true) or production mode (TEST_MODE: false)
 var TEST_MODE = true;
@@ -50,7 +50,7 @@ var TEST_MODE = true;
 // ---------------------------------------------------------------------------------------------------------
 
 // Other fixed settings
-var COMPANY_NAME                = "Company Name"; // don't forget to change it as well in menu.html
+var COMPANY_NAME                = "RocketSpin"; // don't forget to change it as well in menu.html
 var LIMITVALUE                  = 100000;
 var LIMITVALUE_LATEST           = 4; // show only the X latest given the sortMethod
 

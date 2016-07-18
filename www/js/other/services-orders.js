@@ -39,7 +39,7 @@ angular.module('starter.services-orders', [])
   };
 
   /**
-   * Depreciated in Ionic Shop ++
+   * Depreciated in E-Carwash
    */
   self.addOrder = function(uid, OrderData) {
     var qUpdate = $q.defer();
