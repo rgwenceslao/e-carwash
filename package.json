@@ -12,6 +12,8 @@
   "devDependencies": {
     "bower": "^1.3.3",
     "gulp-util": "^3.0.7",
+    "lodash._objecttypes": "^2.4.1",
+    "lodash._shimkeys": "^2.4.1",
     "shelljs": "^0.3.0"
   },
   "cordovaPlugins": [
