@@ -1,1 +1,17 @@
 /* Empty. Add your own CSS if you like */
+.text-center {
+	text-align:center;
+}
+.disp-inline-block {
+	display:inline-block;
+}
+.thirds {
+	width:33%;
+	min-width: 280px;
+}
+.category-icon {
+	font-size: -webkit-xxx-large;
+}
+.category-title {
+	
+}
