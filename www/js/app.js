@@ -143,13 +143,13 @@ angular.module('starter', [
   switch (TEST_MODE) {
     case true:
       //
-      StripeCheckoutProvider.defaults({key: NOODLIO_PAY_CHECKOUT_KEY['test']});
-      break
+      StripeCheckoutProvider.defaults({key: NOODLIO_PAY_CHECKOUT_KEY.test});
+      break;
     default:
       //
-      StripeCheckoutProvider.defaults({key: NOODLIO_PAY_CHECKOUT_KEY['live']});
-      break
-  };
+      StripeCheckoutProvider.defaults({key: NOODLIO_PAY_CHECKOUT_KEY.live});
+      break;
+  }
 
   // Define the resolve function, which checks whether the user is Authenticated
   // It fires $stateChangeError if not the case
@@ -268,7 +268,7 @@ angular.module('starter', [
         resolve: {authResolve: authResolve}
       }
     }
-  })
+  });
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/browse');
