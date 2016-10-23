@@ -1,14 +1,14 @@
 <ion-view view-title="Latest">
-  
-  
+
+
   <ion-nav-buttons side="right">
     <button class="button button-clear button-icon ion-ios-more" ng-click="openPopover($event)"></button>
     &nbsp;&nbsp;&nbsp;
     <button class="button button-clear button-icon ion-ios-search" ng-click="goTo('app.search')"></button>
   </ion-nav-buttons>
-    
+
   <ion-content ng-switch="status.initLoading">
-    
+
     <div ng-switch-when="true">
       <div class="center padding">
         <br>
@@ -18,28 +18,28 @@
     </div>
     <div ng-switch-when="false">
       <!-- CONTENT -->
-      
+
       <ion-refresher
         pulling-icon="ion-ios-arrow-thin-down"
         spinner="ripple"
         pulling-text="Pull to refresh..."
         on-refresh="doRefresh()">
       </ion-refresher>
-      
-      
-      
-      <div 
-        ng-repeat="(categoryId, categoryObj) in Categories" 
-        ng-init="loadProducts(categoryId)" 
+
+
+
+      <div
+        ng-repeat="(categoryId, categoryObj) in Categories"
+        ng-init="loadProducts(categoryId)"
         ng-show="status.loading[categoryId] != null">
-        
-        <label class="item item-divider" ng-click="goToCategory(categoryId)">
+
+        <label class="item item-divider ecw-category-item" ng-click="goToCategory(categoryId)">
           {{::categoryObj.title}}
           <span class="item-note">
             View all
           </span>
         </label>
-            
+
         <div ng-switch="status.loading[categoryId]">
           <div ng-switch-when="true" class="center">
             <br>
@@ -54,11 +54,11 @@
         </div>
 
       </div>
-      
+
       <!-- // CONTENT -->
     </div>
-    
-    
+
+
   </ion-content>
 </ion-view>
 

@@ -166,6 +166,13 @@ hr {
 .item {
   border: 1px solid #f2f2f2 !important; }
 
+.item.ecw-category-item {
+  background-size: cover !important;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url("http://placekitten.com/320/320") !important;
+  padding-top: 256px; }
+
 .products.row, .products.item {
   padding: 0px !important;
   margin: 0px !important; }

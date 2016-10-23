@@ -84,7 +84,7 @@ $balanced:                        #33cd5f !default;
     padding: 0px !important;
 }
 .product {
-    position: relative; 
+    position: relative;
 }
 .product img {
     width: auto;
@@ -201,8 +201,17 @@ hr {
     color: $positive !important;
     font-size: 10px !important;
 }
+
 .item {
     border: 1px solid $greylight !important;
+}
+
+.item.ecw-category-item {
+    background-size: cover !important;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url('http://placekitten.com/320/320') !important;
+    padding-top: 256px;
 }
 
 .products.row, .products.item {
@@ -216,18 +225,18 @@ hr {
 .products-clear.item {
     border: 0px !important;
 }
-.products.card img { 
+.products.card img {
    max-width: 100%;
    height: auto;
    min-height: 100px;
    max-height: 250px;
-   position: relative; 
+   position: relative;
 }
 
-#inventory_nb_items { 
-   position: absolute; 
-   bottom: 0px; 
-   right: 0; 
+#inventory_nb_items {
+   position: absolute;
+   bottom: 0px;
+   right: 0;
    text-align: right;
    padding: 5px;
    font-size: 12px;
@@ -235,19 +244,19 @@ hr {
    color: #fff;
 }
 #inventory_nb_items_top {
-   position: absolute; 
-   top: 0px; 
-   right: 0; 
+   position: absolute;
+   top: 0px;
+   right: 0;
    text-align: right;
    padding: 5px;
    font-size: 12px;
    background: $assertive;
    color: #fff;
 }
-#discount_perc { 
-   position: absolute; 
-   top: 0px; 
-   left: 0; 
+#discount_perc {
+   position: absolute;
+   top: 0px;
+   left: 0;
    text-align: left;
    padding: 5px;
    font-size: 12px;
