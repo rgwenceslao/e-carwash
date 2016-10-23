@@ -24,13 +24,13 @@ $greylight: #f2f2f2
   background: #f2f2f2; }
 
 .button.button-assertive.button-icon {
-  color: #000 !important;
-  background: transparent !important; }
+  color: #000;
+  background: transparent; }
 
 .button-uppercase {
-  font-size: 12px !important;
-  text-transform: uppercase !important;
-  letter-spacing: 2px !important; }
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px; }
 
 .intro.slidebox {
   background: #fff;
@@ -55,7 +55,7 @@ $greylight: #f2f2f2
 
 .product.slidebox {
   background: #444;
-  padding: 0px !important; }
+  padding: 0px; }
 
 .product {
   position: relative; }
@@ -75,114 +75,114 @@ $greylight: #f2f2f2
   bottom: 0;
   right: 0;
   text-align: right;
-  color: #fff !important;
+  color: #fff;
   z-index: 100;
   padding-right: 20px;
   padding-bottom: 15px;
-  font-size: 28px !important; }
+  font-size: 28px; }
 
 .statistics {
   background: #f2f2f2;
   color: #387ef5; }
 
 span.larger {
-  font-size: 16px !important; }
+  font-size: 16px; }
 
 .row.author {
-  margin: 0px 0px !important;
-  padding: 20px 20px !important;
+  margin: 0px 0px;
+  padding: 20px 20px;
   border-top: 1px solid #f2f2f2;
   border-bottom: 1px solid #f2f2f2;
-  margin-bottom: 0px !important; }
+  margin-bottom: 0px; }
 
 .author h1, .product h1 {
   text-transform: uppercase;
   letter-spacing: 2px;
-  font-size: 16px !important; }
+  font-size: 16px; }
 
 .product h1 {
-  margin-top: 20px !important; }
+  margin-top: 20px; }
 
 .author h2, .product h2 {
-  font-size: 12px !important;
+  font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 2px;
   color: #ddd; }
 
 .product.tags {
-  margin: 20px 0px !important;
-  padding: 10px 10px !important;
-  margin-bottom: 0px !important; }
+  margin: 20px 0px;
+  padding: 10px 10px;
+  margin-bottom: 0px; }
 
 button.tagbutton {
-  background: #b1cdfb !important;
-  color: #fff !important;
-  padding: 5px 10px !important;
-  border-radius: 12px !important;
-  margin: 3px 3px !important;
-  text-transform: uppercase !important;
-  letter-spacing: 2px !important;
-  font-size: 10px !important; }
+  background: #b1cdfb;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 12px;
+  margin: 3px 3px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 10px; }
 
 hr {
-  border: 1px solid #f2f2f2 !important; }
+  border: 1px solid #f2f2f2; }
 
 .author img {
-  height: 50px !important;
-  width: 50px !important;
+  height: 50px;
+  width: 50px;
   border-radius: 100%; }
 
 .interaction {
   padding: 10px 20px;
-  padding-bottom: 20px !important; }
+  padding-bottom: 20px; }
 
 .interaction-header {
-  margin-bottom: 10px !important;
+  margin-bottom: 10px;
   text-align: center; }
 
 .interaction-header button {
-  font-size: 12px !important;
+  font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: 600;
-  text-decoration: none !important;
-  color: #387ef5 !important;
-  margin: 0px !important;
-  padding: 0px !important; }
+  text-decoration: none;
+  color: #387ef5;
+  margin: 0px;
+  padding: 0px; }
 
 .title, .item-divider {
   text-transform: uppercase;
   letter-spacing: 2px;
-  font-size: 12px !important; }
+  font-size: 12px; }
 
 .item-divider {
-  background: #f2f2f2 !important; }
+  background: #f2f2f2; }
 
 .item-divider span.item-note {
   margin-top: 3px;
-  color: #387ef5 !important;
-  font-size: 10px !important; }
+  color: #387ef5;
+  font-size: 10px; }
 
 .item {
-  border: 1px solid #f2f2f2 !important; }
+  border: 1px solid #f2f2f2; }
 
 .item.ecw-category-item {
-  background-size: cover !important;
+  background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  background-image: url("http://placekitten.com/320/320") !important;
+  background-image: url("http://placekitten.com/320/320");
   padding-top: 256px; }
 
 .products.row, .products.item {
-  padding: 0px !important;
-  margin: 0px !important; }
+  padding: 0px;
+  margin: 0px; }
 
 .products.col, .products.col.card {
-  padding: 0px !important;
-  margin: 0px !important; }
+  padding: 0px;
+  margin: 0px; }
 
 .products-clear.item {
-  border: 0px !important; }
+  border: 0px; }
 
 .products.card img {
   max-width: 100%;
@@ -225,9 +225,9 @@ hr {
   font-size: 10px;
   text-transform: uppercase;
   letter-spacing: 2px;
-  text-align: center !important;
+  text-align: center;
   width: 100%;
-  line-height: 14px !important; }
+  line-height: 14px; }
 
 #discount_date_end {
   color: #444;
@@ -248,76 +248,76 @@ hr {
   text-transform: capitalize; }
 
 .card {
-  margin: 0px !important; }
+  margin: 0px; }
 
 .card, .card.item {
-  margin: 10px !important;
-  border: 0px !important;
-  box-shadow: none !important; }
+  margin: 10px;
+  border: 0px;
+  box-shadow: none; }
 
 .input-label {
-  width: 100% !important;
-  text-align: left !important; }
+  width: 100%;
+  text-align: left; }
 
 .checkout {
-  padding: 10px 15px !important;
-  margin: 0px !important;
+  padding: 10px 15px;
+  margin: 0px;
   background: #fff; }
 
 .checkout.title {
-  padding-left: 10px !important; }
+  padding-left: 10px; }
 
 .checkout.main {
   border-bottom: 1px solid #f2f2f2;
-  margin: 0px !important;
-  padding: 0px !important; }
+  margin: 0px;
+  padding: 0px; }
 
 .checkout.row {
-  margin: 0px !important;
-  padding: 0px !important; }
+  margin: 0px;
+  padding: 0px; }
 
 .checkout p {
   width: 100%; }
 
 .checkout-sub.row {
-  padding: 0px 10px !important;
-  margin: 0px !important;
+  padding: 0px 10px;
+  margin: 0px;
   background: #fff; }
 
 .checkout-sub.col {
-  margin: 0px !important;
-  padding: 0px 5px !important; }
+  margin: 0px;
+  padding: 0px 5px; }
 
 .checkout h2 {
-  margin-top: 5px !important;
+  margin-top: 5px;
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 2px; }
 
 .checkout-sub h2 {
-  margin-top: 5px !important;
+  margin-top: 5px;
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 2px;
-  font-weight: 400 !important;
-  margin-bottom: 0px !important; }
+  font-weight: 400;
+  margin-bottom: 0px; }
 
 .checkout-sub p {
-  margin: 3px 0px !important;
+  margin: 3px 0px;
   font-size: 11px; }
 
 .checkout p {
-  margin: 3px 0px !important; }
+  margin: 3px 0px; }
 
 .checkout button {
-  margin-top: 5px !important;
-  border-radius: 100% !important;
-  height: 30px !important;
-  width: 30px !important;
-  min-height: 30px !important; }
+  margin-top: 5px;
+  border-radius: 100%;
+  height: 30px;
+  width: 30px;
+  min-height: 30px; }
 
 .item-cart.input-label {
-  font-size: 12px !important; }
+  font-size: 12px; }
 
 .badge-custom {
   background: #ef473a;
@@ -333,17 +333,17 @@ hr {
   padding: 0px 20px; }
 
 .star-active {
-  color: #387ef5 !important; }
+  color: #387ef5; }
 
 .star-inactive {
-  color: #b1cdfb !important; }
+  color: #b1cdfb; }
 
 .note {
   color: #ddd;
   font-size: 12px; }
 
 .button-pressed {
-  color: #ffc900 !important; }
+  color: #ffc900; }
 
 .error-messages {
   color: #ef473a; }
@@ -358,17 +358,17 @@ hr {
   text-align: right; }
 
 .spinner.spinner-small svg {
-  height: 15px !important;
+  height: 15px;
   width: auto; }
 
 .text-positive {
-  color: #387ef5 !important; }
+  color: #387ef5; }
 
 .text-balanced {
-  color: #33cd5f !important; }
+  color: #33cd5f; }
 
 .text-assertive {
-  color: #ef473a !important; }
+  color: #ef473a; }
 
 p.small, span.small {
   font-size: 12px; }
