@@ -5,3 +5,4 @@ platforms
 plugins
 
 *.min.css
+www/css

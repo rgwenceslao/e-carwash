@@ -34,10 +34,12 @@
         ng-show="status.loading[categoryId] != null">
 
         <label class="item item-divider ecw-category-item" ng-click="goToCategory(categoryId)">
-          {{::categoryObj.title}}
-          <span class="item-note">
-            View all
-          </span>
+          <div class="ecw-category-item-text">
+            {{::categoryObj.title}}
+            <span class="item-note">
+              View all
+            </span>
+          </div>
         </label>
 
         <div ng-switch="status.loading[categoryId]">
