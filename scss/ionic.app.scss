@@ -211,7 +211,12 @@ hr {
     background-position: center center;
     background-repeat: no-repeat;
     background-image: url('http://placekitten.com/320/320');
-    padding-top: 256px;
+    padding: 256px 0 0 0;
+
+    .ecw-category-item-text {
+        background-color: rgba(255, 255, 255, 0.5);
+        padding: 16px 8px;
+    }
 }
 
 .products.row, .products.item {
