@@ -33,7 +33,9 @@
         ng-init="loadProducts(categoryId)"
         ng-show="status.loading[categoryId] != null">
 
-        <label class="item item-divider ecw-category-item" ng-click="goToCategory(categoryId)">
+        <label class="item item-divider ecw-category-item"
+            ng-click="goToCategory(categoryId)"
+            ng-style="getCategoryBackground(categoryId)">
           <div class="ecw-category-item-text">
             {{::categoryObj.title}}
             <span class="item-note">
@@ -41,19 +43,6 @@
             </span>
           </div>
         </label>
-
-        <div ng-switch="status.loading[categoryId]">
-          <div ng-switch-when="true" class="center">
-            <br>
-            <ion-spinner icon="ripple"></ion-spinner>
-            <br><br>
-          </div>
-          <div ng-switch-when="false" class="center">
-            <!--Loaded -->
-            <browse-products></browse-products>
-            <!-- // Loaded -->
-          </div>
-        </div>
 
       </div>
 

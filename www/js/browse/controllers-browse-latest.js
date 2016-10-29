@@ -12,6 +12,24 @@ angular.module('starter.controllers-browse-latest', [])
     initLoading: true,
   };
 
+  $scope.getCategoryBackground = function(categoryId) {
+    var category = $scope.ProductsMeta[categoryId];
+
+    if (!category || category.length === 0) {
+      return;
+    }
+
+    var firstItem = category[0];
+    var bgKey = $scope.ProductsMeta[categoryId][0].key;
+    var bgPath = $scope.getThumbnail(bgKey) || 'img/placeholder.png';
+    var styleData = {
+      'background-image': 'url("' + bgPath + '")',
+      // 'transform': 'rotate(90deg)'
+    };
+
+    return styleData;
+  };
+
   $scope.$on('$ionicView.enter', function(e) {
     // global variables
     $scope.AuthData = Auth.AuthData;

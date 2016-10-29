@@ -203,14 +203,15 @@ hr {
 }
 
 .item {
-    border: 1px solid $greylight;
+    // This fixes the annoying lines in the Latest screen
+    border: 0px;
 }
 
 .item.ecw-category-item {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    background-image: url('http://placekitten.com/320/320');
+    background-image: 'img/placeholder.png';
     padding: 256px 0 0 0;
 
     .ecw-category-item-text {
