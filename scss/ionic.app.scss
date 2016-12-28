@@ -450,3 +450,6 @@ p.small, span.small {
 
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
+
+// Include our own SCSS
+@import "scss/overrides";
