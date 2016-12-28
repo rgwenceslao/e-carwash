@@ -1,6 +1,6 @@
 <ion-view view-title="Product">
   <ion-content ng-switch="status.loading">
-    
+
     <div ng-switch-when="true">
       <div class="center padding">
         <br>
@@ -8,26 +8,26 @@
         <ion-spinner icon="ripple"></ion-spinner>
       </div>
     </div>
-    
+
     <div ng-switch-when="false">
       <!-- CONTENT -->
-      
+
       <!-- ----------------------------------------------------------------- -->
       <!-- ----------------------------------------------------------------- -->
       <!-- IMAGES -->
-      <ion-slide-box 
+      <ion-slide-box
         class="{{status.productSizeCSS}} slidebox"
         on-slide-changed="slideHasChanged($index)">
-        
+
         <!-- slide -->
-        <ion-slide 
-          class="center" 
+        <ion-slide
+          class="center"
           ng-repeat="(imageKey, image) in ProductImages"
           ng-click="changeImageSize()">
-          
+
           <!-- img -->
           <img  ng-src="{{image}}">
-          
+
           <!-- extend icon -->
           <span class="product extend-icon" ng-switch="status.productSizeCSS">
             <span ng-switch-when="product small"><i class="icon ion-arrow-expand"></i></span>
@@ -43,14 +43,14 @@
       <span id="discount_perc" ng-show="ProductMeta['discount_perc']">
         -{{ProductMeta['discount_perc']}}%
       </span>
-      
-      
+
+
       <!-- ----------------------------------------------------------------- -->
       <!-- ----------------------------------------------------------------- -->
       <!-- DETAILS -->
-      
-      
-      
+
+
+
       <div class="statistics" ng-show="!status.loadingIndex">
         <div class="row">
           <div class="col center">
@@ -70,13 +70,13 @@
           </div>
         </div>
       </div>
-      
-      
+
+
       <div class="product center">
         <h1>{{ProductMeta.title}}</h1>
-  
+
         <p>
-            <!-- 
+            <!--
             Alternatively use stars
             <stars rating="{{ProductIndexValues['ratings_avg']}}"></stars>
             ({{ProductIndexValues['ratings_count']}})
@@ -92,14 +92,14 @@
              ({{ProductIndexValues['ratings_count']}})
         </p>
       </div>
-      
+
       <div class="padding-sides large text-left">
         <p>{{ProductMeta.description}}</p>
       </div>
 
-      
+
       <!-- // DETAILS -->
-      
+
       <!-- ----------------------------------------------------------------- -->
       <!-- ----------------------------------------------------------------- -->
       <!-- ATTRIBUTES -->
@@ -109,7 +109,7 @@
             <div class="input-label">
               {{aType}}
             </div>
-            <select 
+            <select
               ng-change="attributeChanged()"
               ng-model="selection[aType]">
               <option
@@ -124,7 +124,7 @@
       </div>
 
       <!-- // ATTRIBUTES -->
-      
+
       <!-- ----------------------------------------------------------------- -->
       <!-- ----------------------------------------------------------------- -->
       <!-- TAGS -->
@@ -141,12 +141,13 @@
           </button>
         </div>
       <!-- TAGS -->
-      
+
       <!-- ----------------------------------------------------------------- -->
       <!-- ----------------------------------------------------------------- -->
       <!-- AUTHOR -->
-      
-      <div class="row author" ng-show="!status.loadingAuthor">
+      <!-- This info does not make sense for E-Carwash -->
+
+      <!-- <div class="row author" ng-show="!status.loadingAuthor">
         <div class="col col-20">
           <img ng-src="{{AuthorData.profilePicture || 'img/ionic.png'}}">
         </div>
@@ -157,25 +158,25 @@
           </h2>
           <p>{{AuthorData.other.bio}}</p>
 
-          <button 
-            class="button button-stable button-small tagbutton" 
+          <button
+            class="button button-stable button-small tagbutton"
             ng-click="loadAuthorProducts(ProductMeta.userId)">
             &nbsp;More from this author
           </button>
 
         </div>
-      </div>
-      
+      </div> -->
+
       <!-- // AUTHOR -->
-      
-      
+
+
 
       <!-- ----------------------------------------------------------------- -->
       <!-- ----------------------------------------------------------------- -->
       <!-- INTERACTION -->
-      
+
       <div class="interaction grey">
-        
+
         <!-- Header -->
         <div class="row interaction-header">
           <div class="col">
@@ -191,26 +192,26 @@
             </button>
           </div>
         </div>
-        
+
         <!-- COMMENTS -->
         <div ng-show="status.activeTab == 'comments'">
-          
+
           <!-- header signed out -->
           <p ng-show="!AuthData.uid">
             You need to be <a href="" ng-click="goTo('app.account')">signed in</a> to post comments
           </p>
-          
+
           <!-- header signed in -->
           <div ng-show="AuthData.uid">
             <label class="item item-input">
               <textarea rows="4" placeholder="Add comment" ng-model="FormData.commentValue"></textarea>
             </label>
-            <button 
+            <button
                style="margin-top: 0px !important;"
-              class="button button-block button-positive" 
+              class="button button-block button-positive"
               ng-click="addComment()">Submit</button>
           </div>
-          
+
           <div ng-switch="status.loadingComments">
             <div ng-switch-when="true" class="center">
               <br>
@@ -221,7 +222,7 @@
               <br>
               <div class="list">
 
-                <a class="item item-text-wrap item-light item-avatar text-left" 
+                <a class="item item-text-wrap item-light item-avatar text-left"
                   ng-repeat="comment in ProductComments | orderBy: '-timestamp'">
                   <img ng-src="{{getCommentProfile(comment.userId).profilePicture || 'img/ionic.png'}}">
                   <h2>{{comment.message}}</h2>
@@ -229,41 +230,41 @@
                   {{formatTimestamp(comment.timestamp)}}
                   </p>
                 </a>
- 
+
               </div>
               <!-- // comment -->
             </div>
           </div>
-          
+
         </div>
         <!-- // COMMENTS -->
-        
-        
+
+
         <!-- RATINGS -->
         <div class="center" ng-show="status.activeTab == 'ratings'">
-          
+
           <!-- header signed out -->
           <p ng-show="!AuthData.uid && AuthData.uid != ProductMeta.userId">
             You need to be <a href="" ng-click="goTo('app.account')">signed in</a> to post a rating
           </p>
-          
+
           <!-- header signed in | did not purchase product -->
           <p ng-show="AuthData.uid && !status.purchaseBoolean && AuthData.uid != ProductMeta.userId && !status.loadingPurchaseBoolean">
             You need to have purchased this product in order to post a rating
           </p>
-          
+
           <!-- header signed in | own product -->
           <p ng-show="AuthData.uid == ProductMeta.userId">
             You cannot rate your own product
           </p>
-          
+
           <!-- header signed in | own product -->
           <p ng-show="getRatingProfile(AuthData.uid)">
             You rated this product {{ProductRatings[AuthData.uid].value}} stars
           </p>
-          
-          
-          
+
+
+
           <!-- header signed in -->
           <div ng-show="AuthData.uid && status.purchaseBoolean && AuthData.uid != ProductMeta.userId && !getRatingProfile(AuthData.uid)">
             <rating-stars-select></rating-stars-select>
@@ -271,12 +272,12 @@
             <label class="item item-input">
               <textarea rows="4" placeholder="Optional" ng-model="FormData.ratingMessage"></textarea>
             </label>
-            <button 
+            <button
                style="margin-top: 0px !important;"
-              class="button button-block button-positive" 
+              class="button button-block button-positive"
               ng-click="addRating()">Submit</button>
           </div>
-          
+
           <div ng-switch="status.loadingRatings">
             <div ng-switch-when="true" class="center">
               <br>
@@ -287,7 +288,7 @@
               <br>
               <div class="list">
 
-                <a class="item item-text-wrap item-light item-avatar text-left" 
+                <a class="item item-text-wrap item-light item-avatar text-left"
                   ng-repeat="(userId, rating) in ProductRatings | orderBy: '-timestamp'">
                   <img ng-src="{{getRatingProfile(userId).profilePicture || 'img/ionic.png'}}">
                   <h2>
@@ -300,33 +301,33 @@
                   {{formatTimestamp(rating.timestamp)}}
                   </p>
                 </a>
- 
+
               </div>
               <!-- // rating -->
             </div>
           </div>
-          
+
         </div>
         <!-- // RATINGS -->
-        
+
       </div>
       <!-- // INTERACTION-->
-      
+
       <!-- // CONTENT-->
     </div>
-    
+
   </ion-content>
-  
-  
+
+
   <ion-footer-bar align-title="left" class="bar-balanced">
     <div class="buttons">
-      <button 
+      <button
         style="margin: 0px !important;"
         class="button {{walletPressedCSS(status.productId)}} icon-left ion-ios-heart"
         ng-click="saveItem(status.productId)">
         &nbsp;Save
       </button>
-      <button 
+      <button
         style="margin: 0px !important;"
         class="button {{cartPressedCSS(status.productId)}} icon-left ion-ios-cart"
         ng-click="addToCart(status.productId)">
@@ -335,7 +336,7 @@
     </div>
     <h1 class="title"></h1>
     <div class="buttons">
-      <button 
+      <button
         style="margin: 0px !important;"
         class="button icon-left ion-ios-arrow-thin-right"
         ng-click="goTo('app.cart')">
